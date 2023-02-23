@@ -11,6 +11,7 @@ import models.Cars;
 public class Restapi {
 
     public Restapi() {
+    
     }
 
     public String getProductsAsString() {
