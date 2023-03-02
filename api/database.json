@@ -1,6 +1,7 @@
 {
     "cars": [
         {
+            "id": 1,
             "name": "Citroen C3",
             "brand": "Citroen",
             "platenumber": "AA-AD-525",
@@ -10,6 +11,7 @@
             "price": 15500
         },
         {
+            "id": 2,
             "name": "Seat Leon",
             "brand": "Seat",
             "platenumber": "AB-AA-855",
@@ -19,6 +21,7 @@
             "price": 17600
         },
         {
+            "id": 3,
             "name": "Suzuki Vitara",
             "brand": "Suzuki",
             "platenumber": "AA-AB-914",
@@ -28,6 +31,7 @@
             "price": 25000
         },
         {
+            "id": 4,
             "name": "Toyota Aygo",
             "brand": "Toyota",
             "platenumber": "AA-AA-324",
@@ -37,6 +41,7 @@
             "price": 12400
         },
         {
+            "id": 5,
             "name": "Opel Atra",
             "brand": "Opel",
             "platenumber": "AA-AE-313",
@@ -46,6 +51,7 @@
             "price": 23000
         },
         {
+            "id": 6,
             "name": "Volkswagen Polo",
             "brand": "Volkswagen",
             "platenumber": "AB-AE-216",
