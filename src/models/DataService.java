@@ -15,8 +15,8 @@ public class DataService {
         con = this.database.connect();
     }
 
-    public ArrayList<Cars> getCars() {
-        ArrayList<Cars> carsList = null;
+    public ArrayList<Car> getCars() {
+        ArrayList<Car> carsList = null;
         try {
             carsList = tryGetCars();
         } catch (SQLException e) {
@@ -25,13 +25,13 @@ public class DataService {
         return carsList;
     }
 
-    public ArrayList<Cars> tryGetCars() throws SQLException {
+    public ArrayList<Car> tryGetCars() throws SQLException {
         String sql = "select * from cars";
         Statement statement = this.con.createStatement();
         ResultSet resultSet = statement.executeQuery(sql);
-        ArrayList<Cars> carsList = new ArrayList<>();
+        ArrayList<Car> carsList = new ArrayList<>();
         while(resultSet.next()) {
-            Cars cars = new Cars();
+            Car cars = new Car();
             cars.id = resultSet.getInt("id");
             cars.name = resultSet.getString("name");
             cars.brand = resultSet.getString("brand");

@@ -6,7 +6,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import models.Pro;
-import models.Cars;
+import models.Car;
 
 public class Restapi {
 
@@ -14,25 +14,36 @@ public class Restapi {
     
     }
 
-    public String getProductsAsString() {
-        Pro pro = new Pro();
+    // public String getProductsAsString() {
+    //     Pro pro = new Pro();
                 
-        String host = pro.getProperty("restapi.host");
-        String endpoint = "cars";
-        String urlStr = host + endpoint;
-        HttpClient http = new HttpClient();
-        String res = http.get(urlStr);
-        return res;
-    }
+    //     String host = pro.getProperty("restapi.host");
+    //     String endpoint = "cars";
+    //     String urlStr = host + endpoint;
+    //     HttpClient http = new HttpClient();
+    //     String res = http.get(urlStr);
+    //     return res;
+    // }
 
-    public ArrayList<Cars> getCars() {
+    public ArrayList<Car> getCars() {
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
         String text = getProductsAsString();
         
-        Cars[] carsArray =  gson.fromJson(text, Cars[].class);
-        ArrayList<Cars> carsList = 
+        Car[] carsArray =  gson.fromJson(text, Car[].class);
+        ArrayList<Car> carsList = 
             new ArrayList<>(Arrays.asList(carsArray));
         return carsList;
+    }
+
+    public String getProductsAsString() {
+
+        HttpClient httpClient = new HttpClient();
+        String host = "http://[::1]:3000/";
+        String endpoint = "cars";
+        String urlStr = host + endpoint;
+        String res = httpClient.get(urlStr);
+
+        return res;
     }
 }

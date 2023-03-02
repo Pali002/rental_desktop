@@ -13,9 +13,12 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class HttpClient {
+
     int responseCode;
+
     public HttpClient() {
     }
+
     public String get(String urlStr) {
         String result;
         try {
@@ -27,6 +30,7 @@ public class HttpClient {
         }
         return result;
     }
+
     public String tryGet(String urlStr) throws IOException {
         URL url = new URL(urlStr);
         HttpURLConnection http = (HttpURLConnection) url.openConnection();
@@ -37,6 +41,7 @@ public class HttpClient {
         String text = convertInputStreamToString(inputStream);        
         return text;
     }
+
     public String post(String url, String data, HashMap<String, String> headers) {
         String result;
         try {
@@ -48,6 +53,7 @@ public class HttpClient {
         }
         return result;
     }
+
     public String tryPost(String urlStr, String data, HashMap<String, String> headers) 
             throws IOException {
         URL url = new URL(urlStr);
@@ -69,6 +75,7 @@ public class HttpClient {
         String text = convertInputStreamToString(inputStream);
         return text;
     }
+
     private String convertInputStreamToString(InputStream inputStream) {
         String text;
         try {
@@ -80,6 +87,7 @@ public class HttpClient {
         }
         return text;
     }
+    
     private String tryConvertInputStreamToString(InputStream inputStream) 
             throws UnsupportedEncodingException {
         StringBuilder stringBuilder = new StringBuilder();

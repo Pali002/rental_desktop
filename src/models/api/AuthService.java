@@ -6,8 +6,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class AuthService {
-//    String host = "http://localhost:8000/api/";
-    String host = "http://[::1]:3000/";
+    String host = "http://localhost:8000/api/";
+    // String host = "http://[::1]:3000/";
     public AuthService() {
     }
     public void registry(String name, String email, String pass) {

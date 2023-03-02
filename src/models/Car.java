@@ -1,6 +1,6 @@
 package models;
 
-public class Cars {
+public class Car {
     int id;
     String name;
     String brand;

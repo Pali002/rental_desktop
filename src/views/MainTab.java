@@ -4,7 +4,8 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 
 public class MainTab extends TabPane {
-    Tab carsTab;
+
+    Tab carTab;
     Tab loginTab;
     MainView mainView;
 
@@ -17,12 +18,12 @@ public class MainTab extends TabPane {
     }
 
     private void initComponent() {
-        this.carsTab = new Tab("Autók", this.mainView);
+        this.carTab = new Tab("Autók", this.mainView);
         this.loginTab = new Tab("Belépés");
     }
 
     private void addComponent() {
-        this.getTabs().add(this.carsTab);
+        this.getTabs().add(this.carTab);
         this.getTabs().add(this.loginTab);
     }
     
