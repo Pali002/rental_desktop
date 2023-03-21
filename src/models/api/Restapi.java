@@ -10,10 +10,6 @@ import models.Car;
 
 public class Restapi {
 
-    public Restapi() {
-    
-    }
-
     // public String getProductsAsString() {
     //     Pro pro = new Pro();
                 
@@ -45,5 +41,9 @@ public class Restapi {
         String res = httpClient.get(urlStr);
 
         return res;
+    }
+
+    public boolean checkUrl(String string) {
+        return false;
     }
 }

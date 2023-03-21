@@ -61,7 +61,14 @@ public class MainView extends VBox {
         TableColumn<Car, Double> priceCol = new TableColumn<>("Ár");
         priceCol.setMinWidth(50);
         priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
-        
+
+        // Restapi restApi = new Restapi();
+        // boolean success = restApi.checkUrl("http://localhost:8000");
+        // if(success) {
+        //     tableView.setItems(this.getCars());
+        // }else {
+        //     System.out.println("A REST API nem elérhető!");
+        // }
         tableView.setItems(this.getCars());
 
         tableView.getColumns().add(idCol);
