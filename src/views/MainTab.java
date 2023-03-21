@@ -31,8 +31,8 @@ public class MainTab extends TabPane {
     }
 
     private void addComponent() {
-        this.getTabs().add(this.carTab);
         this.getTabs().add(this.loginTab);
+        this.getTabs().add(this.carTab);
         this.getTabs().add(this.registryTab);
     }
     
