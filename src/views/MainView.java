@@ -2,6 +2,7 @@ package views;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -24,6 +25,7 @@ public class MainView extends VBox {
         this.initData();
         this.initTable();
         this.getChildren().add(carsLabel);
+        this.addButton();
         this.getChildren().add(tableView);
     }
 
@@ -89,5 +91,16 @@ public class MainView extends VBox {
 
     private void initData() {
         this.restapi = new Restapi();
+    }
+
+    private void addButton() {
+    
+        Button editButton = new Button();
+        editButton.setText("Módosítás");
+        this.getChildren().add(editButton);
+
+        Button deleteButton = new Button();
+        deleteButton.setText("Törlés");
+        this.getChildren().add(deleteButton);
     }
 }

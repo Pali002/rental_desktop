@@ -1,6 +1,7 @@
 package views.registry;
 
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import views.InputPanel;
@@ -21,6 +22,7 @@ public class RegistryView extends VBox {
         this.setComponent();
         this.addComponent();
         this.setPanel();
+        this.addButton();
 
     }
     private void initComponent() {
@@ -48,4 +50,10 @@ public class RegistryView extends VBox {
         this.setAlignment(Pos.CENTER);
     }
     
+    private void addButton() {
+    
+        Button registryButton = new Button();
+        registryButton.setText("Regisztráció");
+        this.getChildren().add(registryButton);
+    }
 }

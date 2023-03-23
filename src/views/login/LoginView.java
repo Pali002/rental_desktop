@@ -1,8 +1,7 @@
 package views.login;
 
-import javax.swing.JButton;
-
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import views.InputPanel;
 import views.PassPanel;
@@ -13,13 +12,13 @@ public class LoginView extends VBox {
     TitlePanel titlePanel;
     InputPanel emailInput;
     PassPanel passInput;
-    JButton loginButton = new JButton("Bejelentkezés");
 
     public LoginView() {
         this.initComponent();
         this.setComponent();
         this.addComponent();
         this.setPanel();
+        this.addButton();
     }
 
     private void initComponent() {
@@ -42,5 +41,12 @@ public class LoginView extends VBox {
 
     private void setPanel() {
         this.setAlignment(Pos.CENTER);
+    }
+
+    private void addButton() {
+    
+        Button loginButton = new Button();
+        loginButton.setText("Bejelentkezés");
+        this.getChildren().add(loginButton);
     }
 }
