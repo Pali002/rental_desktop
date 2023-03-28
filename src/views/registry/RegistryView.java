@@ -15,6 +15,7 @@ public class RegistryView extends VBox {
     InputPanel emailInput;
     PassPanel passInput;
     PassPanel passAgainInput;
+    Button registryButton;
     
     public RegistryView() {
 
@@ -22,38 +23,36 @@ public class RegistryView extends VBox {
         this.setComponent();
         this.addComponent();
         this.setPanel();
-        this.addButton();
-
     }
+
     private void initComponent() {
         this.titlePanel = new TitlePanel();
         this.nameInput = new InputPanel();
         this.emailInput = new InputPanel();
         this.passInput = new PassPanel();
         this.passAgainInput = new PassPanel();
+        this.registryButton = new Button();
     }
+
     private void setComponent() {
         this.titlePanel.setText(" Regisztáció ");
         this.nameInput.setText("Név :");
         this.emailInput.setText("Email :");
         this.passInput.setText("Jelszó :");
         this.passAgainInput.setText("Jelszó megerősítése :");
+        this.registryButton.setText("Regisztráció");
     }
+
     private void addComponent() {
         this.getChildren().add(this.titlePanel);
         this.getChildren().add(this.nameInput);
         this.getChildren().add(this.emailInput);
         this.getChildren().add(this.passInput);
         this.getChildren().add(this.passAgainInput);
+        this.getChildren().add(this.registryButton);
     }
+
     private void setPanel() {
         this.setAlignment(Pos.CENTER);
-    }
-    
-    private void addButton() {
-    
-        Button registryButton = new Button();
-        registryButton.setText("Regisztráció");
-        this.getChildren().add(registryButton);
     }
 }
